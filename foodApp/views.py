@@ -5,3 +5,10 @@ def index(request):
 
 def kyosuke(request):
     return render(request,'foodApp/kyosuke.html')
+
+
+def kyosuke_Photo(request):
+    return render(request, 'foodApp/kyosuke_Photo.html')
+
+def kyosuke_Comment(request):
+    return render(request, 'foodApp/kyosuke_Comment.html')

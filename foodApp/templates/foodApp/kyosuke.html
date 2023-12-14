@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <h2><a href="index.html">Home</a></h2>
+    <h2><a href="{% url 'foodApp' %}"><span class="Home">Home</span></a></h2>
     <hr>
     <h2>赤羽京介</h2>
     <p>最寄り駅：赤羽駅 [ 東京都 ], ジャンル：つけ麺</p>
@@ -16,16 +16,19 @@
     
     <ul>
         <li>
-            <span class="Top">Top</span>
+            <a href="{% url 'kyosuke' %}"><span class="Top">Top</span></a>
             <p>aaa</p>
         </li>
         <li>
-            <a href="kyosuke_Photo.html"><span class="Photo">Photo</span></a>
+            <a href="{% url 'kyosuke_Photo' %}"><span class="Photo">Photo</span></a>
         </li>
         <li>
-            <a href="kyosuke_Comment.html"><span class="Comment">Comment</span></a>
+            <a href="{% url 'kyosuke_Comment' %}"><span class="Comment">Comment</span></a>
         </li>
     </ul>
+    
+    <p>ss</p>
+    
 
     <p>ss</p>
 </body>
@@ -38,7 +41,6 @@
     }
 
     ul {
-        position: center;
         list-style: none;
         padding: 0;
         margin: 0;
