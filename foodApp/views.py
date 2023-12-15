@@ -12,3 +12,6 @@ def kyosuke_Photo(request):
 
 def kyosuke_Comment(request):
     return render(request, 'foodApp/kyosuke_Comment.html')
+
+def helspo(request):
+    return render(request,'foodApp/helspo.html')
