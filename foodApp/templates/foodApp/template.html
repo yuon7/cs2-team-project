@@ -1,0 +1,33 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>レストラン詳細 - お店紹介サイト</title>
+    <link href="{% static 'foodApp/css/template.css' %}" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <!-- ヘッダーの内容 -->
+    </header>
+
+    <section class="restaurant-details">
+        <h2>oyster house ザキヤマ</h2>
+        <img src="{% static 'foodApp/img/restaurant-detail.jpg' %}" alt="レストランの画像">
+        <div class="info">
+            <h3>基本情報</h3>
+            <p>ジャンル: 居酒屋、海鮮</p>
+            <p>予算: ￥3,000～￥3,999</p>
+            <p>住所: 東京都北区赤羽1-20-6</p>
+            <p>営業時間: 13:00～22:00</p>
+            <!-- その他の情報 -->
+        </div>
+    </section>
+
+    <footer>
+        <!-- フッターの内容 -->
+    </footer>
+
+    <script src="{% static 'foodApp/js/script.js' %}"></script>
+</body>
+</html>

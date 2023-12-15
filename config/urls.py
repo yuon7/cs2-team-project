@@ -8,5 +8,6 @@ urlpatterns = [
     path('kyosuke/', foodApp.views.kyosuke, name='kyosuke'),
     path('kyosuke_Photo/', foodApp.views.kyosuke_Photo, name='kyosuke_Photo'),
     path('kyosuke_Comment/', foodApp.views.kyosuke_Comment, name='kyosuke_Comment'),
-    path("helspo/",foodApp.views.helspo,name="helspo"),
+    path("helspo/", foodApp.views.helspo, name="helspo"),
+    path("template/", foodApp.views.template, name="template"),
 ]
