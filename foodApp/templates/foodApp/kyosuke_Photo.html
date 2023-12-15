@@ -1,9 +1,11 @@
-<!DOCTYPE html>
+
+{% load static %}<!DOCTYPE html>
 <html lang="ja">
 
 <head>
     <title>京介</title>
     <meta charset="utf-8">
+    <link href="{% static 'foodApp/css/kyosuke.css' %}" rel="stylesheet">
 
 </head>
 
@@ -30,34 +32,4 @@
     <p>ss</p>
     
 </body>
-
-
-
-<style>
-    h1 {
-        color: rgb(16, 16, 16);
-    }
-
-    ul {
-        position: center;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex; /* Flexboxを使用して横並びにする */
-    }
-
-    li {
-        padding-right: 0%; /* 項目の間隔を調整（必要に応じて調整してください） */
-    }
-
-    .Top,
-    .Photo,
-    .Comment {
-        font-size: 35px;
-        padding: 10px;
-        border: 1px solid #ccc; /* ボーダーを追加 */
-    }
-</style>
-
-
 </html>
