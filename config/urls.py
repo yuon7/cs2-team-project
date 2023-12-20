@@ -11,4 +11,6 @@ urlpatterns = [
     path("helspo/",foodApp.views.helspo,name="helspo"),
     path("helspo_comment/",foodApp.views.helspo_comment,name="helspo_comment"),
     path("helspo_photo/",foodApp.views.helspo_photo,name="helspo_photo"),
+    path("template/", foodApp.views.template, name="template"),
+
 ]
