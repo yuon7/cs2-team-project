@@ -9,3 +9,7 @@ class Restaurant(models.Model):
 
     def __str__(self):
         return self.name
+    
+#class UploadImage(models.Model):
+   # image = models.ImageField(uplosd_to='img/')
+

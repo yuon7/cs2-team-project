@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <title>WELLB</title>
+    <meta charset="utf-8">
+    <link href="{% static 'foodApp/css/wellb.css' %}"rel="stylesheet">
+</head>
+
+<body>
+    <h2>食べログ</h2>
+    <hr>
+    <h1>WELLB 東洋大学赤羽台キャンパス</h1>
+    <h3>(ウェルブガクショク)</h3>
+    <h4>赤羽駅/定食、ラーメン</h4>
+    <hr>
+
+    <h3>~500円</h3>
+
+    <ul>
+        <li>
+            <a href="{% url 'wellb' %}">トップ</a>
+        </li>
+        <li>
+            <a href="{% url 'wellb_photo' %}">写真</a>
+        </li>
+        <li>
+            <a href="{% url 'wellb_comment' %}">コメント</a>
+        </li>
+    </ul>
+    <h2>
+        東洋大学赤羽台キャンパスWELLBの学食！！
+    </h2>
+    <p>「福祉」「健康」「スポーツ科学」の分野の課題解決に挑む 新たな2学部がある東洋大学赤羽台キャンパスのHub-2、WELLBの学食</p>
+    <ul>
+        <li>
+            月～金：11時00分~14時00分
+        </li>
+        <li>
+            土:11時00分~14時00分
+        </li>
+        <li>
+            日・祝日:休業
+        </li>
+    </ul>
+</body>
+
+</html>

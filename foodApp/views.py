@@ -21,5 +21,15 @@ def helspo_comment(request):
 
 def helspo_photo(request):
     return render(request,"foodApp/helspo_photo.html")
+
 def template(request):
     return render(request,'foodApp/template.html')
+
+def wellb(request):
+    return render(request,'foodApp/wellb.html')
+
+def wellb_comment(request):
+    return render(request,"foodApp/wellb_comment.html")
+
+def wellb_photo(request):
+    return render(request,"foodApp/wellb_photo.html")

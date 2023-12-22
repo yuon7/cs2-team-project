@@ -1,0 +1,30 @@
+<head>
+    <title>WELLB</title>
+    <meta charset="utf-8">
+    <link href="{% static 'foodApp/css/wellb_comment.css' %}"rel="stylesheet">
+</head>
+
+<body>
+    <h2>食べログ</h2>
+    <hr>
+    <h1>WELLB学食 東洋大学赤羽台キャンパス</h1>
+    <h3>(ウェルブガクショク)</h3>
+    <h4>赤羽駅/定食、ラーメン</h4>
+    <hr>
+
+    <h3>~600円</h3>
+
+    <ul>
+        <li>
+            <a href="{% url 'wellb' %}">トップ</a>
+        </li>
+        <li>
+            <a href="{% url 'wellb_photo' %}">写真</a>
+        </li>
+        <li>
+            <a href="{% url 'wellb_comment' %}">コメント</a>
+        </li>
+    </ul>
+</body>
+
+</html>

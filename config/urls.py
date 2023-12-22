@@ -12,5 +12,7 @@ urlpatterns = [
     path("helspo_comment/",foodApp.views.helspo_comment,name="helspo_comment"),
     path("helspo_photo/",foodApp.views.helspo_photo,name="helspo_photo"),
     path("template/", foodApp.views.template, name="template"),
-
+    path("wellb/",foodApp.views.wellb,name="wellb"),
+    path("wellb_comment/",foodApp.views.wellb_comment,name="wellb_comment"),
+    path("wellb_photo/",foodApp.views.wellb_photo,name="wellb_photo"),
 ]
