@@ -1,21 +1,50 @@
-h1{
+h2{
     color: rgb(16, 16, 16);
    }
 
-ul {
-       position: center;
-       list-style: none;
-       padding: 0;
-       margin: 0;
-       display: flex; /* Flexboxを使用して横並びにする */
-   }
 
+
+h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+  
+  a {
+    text-decoration: none; /* リンクのデフォルトの下線をなくす */
+    color: rgb(239, 203, 142); /* リンクのデフォルトの色を設定 */
+  }
+  
+  a:hover {
+    color: blue; /* マウスがリンク上にあるときの色を設定 */
+  }
+
+  
+
+ul {
+    position: center;
+    list-style: none;
+    display: flex; /* Flexboxを使用して横並びにする */
+    margin-left: 10px;
+    border-bottom: 2px solid #2e1f1f;
+}
+
+
+
+li{
+    border: 1px solid #805353; /* ボーダーを追加 */
+}
 
 .Top,
 .Photo,
 .Comment {
-       font-size: 35px;
-       padding: 10px;
-       border: 1px solid #ccc; /* ボーダーを追加 */
-       background-color: antiquewhite;
-   }
+ margin-right: 10px; 
+ font-size: 35px;
+}
+
+.kyosuke{
+  padding-left: 10px;
+}
