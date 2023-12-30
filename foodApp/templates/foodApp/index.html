@@ -1,51 +1,52 @@
-{%load static%}
+{% load static %}
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <title>お店紹介サイト</title>
-    <link href="{% static 'foodApp/css/index.css' %}" rel="stylesheet">
-</head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#">ホーム</a></li>
-                <li><a href="#restaurants">お店一覧</a></li>
-                <li><a href="#contact">お問い合わせ</a></li>
-            </ul>
-        </nav>
-        <h1>赤羽おすすめ飲食店まとめ</h1>
-    </header>
-
-    <section id="restaurants">
-        <h2>お店一覧</h2>
-        <div class="restaurant">
-            <img src="{% static 'foodApp/img/restaurant1.jpg' %}" alt="レストラン1">
-            <div class="restaurant-info">
-                <h3>赤羽京介</h3>
-                <div class="rating">評価: ★★★★☆</div>
-                <p>ここにレストラン1の簡単な説明を書きます。</p>
+    <head>
+        <meta charset="UTF-8">
+        <title>お店紹介サイト</title>
+        <link href="{% static 'foodApp/css/index.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#">ホーム</a>
+                    </li>
+                    <li>
+                        <a href="#restaurants">お店一覧</a>
+                    </li>
+                    <li>
+                        <a href="#contact">お問い合わせ</a>
+                    </li>
+                </ul>
+            </nav>
+            <h1>赤羽おすすめ飲食店まとめ</h1>
+        </header>
+        <section id="restaurants">
+            <h2>お店一覧</h2>
+            <div class="restaurant">
+                <img src="{% static 'foodApp/img/restaurant1.jpg' %}" alt="レストラン1">
+                <div class="restaurant-info">
+                    <h3>赤羽京介</h3>
+                    <div class="rating">評価: ★★★★☆</div>
+                    <p>ここにレストラン1の簡単な説明を書きます。</p>
+                </div>
             </div>
-        </div>
-        <!-- 他のレストランも同様に追加 -->
-    </section>
-
-    <footer>
-        <p>&copy; 2023 お店紹介サイト. All rights reserved.</p>
-    </footer>
-
-    <script src="{% static 'foodApp/js/script.js' %}"></script>
-</body>
+            <!-- 他のレストランも同様に追加 -->
+        </section>
+        <footer>
+            <p>&copy; 2023 お店紹介サイト. All rights reserved.</p>
+        </footer>
+        <script src="{% static 'foodApp/js/script.js' %}"></script>
+    </body>
 </html>
-        </div>
-        <!-- 他のレストランも同様に追加 -->
-    </section>
-
-    <footer>
-        <p>&copy; 2023 Class5 Group7. All rights reserved.</p>
-    </footer>
-
-    <script src="{% static 'foodApp/js/script.js' %}"></script>
+</div>
+<!-- 他のレストランも同様に追加 -->
+</section>
+<footer>
+    <p>&copy; 2023 Class5 Group7. All rights reserved.</p>
+</footer>
+<script src="{% static 'foodApp/js/script.js' %}"></script>
 </body>
 </html>
