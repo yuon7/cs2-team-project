@@ -15,4 +15,5 @@ urlpatterns = [
     path("wellb/",foodApp.views.wellb,name="wellb"),
     path("wellb_comment/",foodApp.views.wellb_comment,name="wellb_comment"),
     path("wellb_photo/",foodApp.views.wellb_photo,name="wellb_photo"),
+    path('<int:article_id>/', foodApp.views.detail, name='detail'),
 ]

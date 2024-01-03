@@ -1,4 +1,22 @@
 from django.shortcuts import render
+from foodApp.models import Article, Comment
+from django.http import Http404
+
+def detail(request,article_id):
+    try:
+        article = Article.objects.get(pk=article_id)
+    except Article.DoesNotExist:
+        raise Http404("Restaurant does not exist")
+    
+    if request.method == 'post':
+        comment = Comment(article=article, text=request.POST['text'])
+        comment.save()
+
+    context = {
+        'article':article,
+        'comment':article.comment.order_by('-posted_at')
+    }
+    return render(request,'foodApp/helspo_comment.html',context)
 
 def index(request):
     return render(request,'foodApp/index.html')
