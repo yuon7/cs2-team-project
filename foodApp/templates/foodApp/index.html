@@ -3,7 +3,7 @@
 <html lang="ja">
     <head>
         <meta charset="UTF-8">
-        <title>お店紹介サイト</title>
+        <title>飲食</title>
         <link href="{% static 'foodApp/css/index.css' %}" rel="stylesheet">
     </head>
     <body>
@@ -11,42 +11,61 @@
             <nav>
                 <ul>
                     <li>
-                        <a href="#">ホーム</a>
+                        <a href="#restaurants">ランキング</a>
                     </li>
                     <li>
-                        <a href="#restaurants">お店一覧</a>
+                        <a href="#restaurants">ジャンル</a>
                     </li>
                     <li>
                         <a href="#contact">お問い合わせ</a>
                     </li>
                 </ul>
             </nav>
-            <h1>赤羽おすすめ飲食店まとめ</h1>
+            <h1>赤羽のおすすめ飲食店</h1>
         </header>
+        <div id="slideshow">
+            <div class="slide active">
+                <img src="{% static 'foodApp/img/toutyo.JPG' %}" alt="写真1">
+            </div>
+            <div class="slide">
+                <img src="{% static 'foodApp/img/ito.JPG' %}" alt="写真2">
+            </div>
+            <div class="slide">
+                <img src="{% static 'foodApp/img/danbo.JPG' %}" alt="写真3">
+            </div>
+            <!-- その他のスライド -->
+        </div>
         <section id="restaurants">
             <h2>お店一覧</h2>
             <div class="restaurant">
-                <img src="{% static 'foodApp/img/restaurant1.jpg' %}" alt="レストラン1">
+                <img src="{% static 'foodApp/img/kyosuke.png' %}" alt="レストラン1">
                 <div class="restaurant-info">
                     <h3>赤羽京介</h3>
                     <div class="rating">評価: ★★★★☆</div>
-                    <p>ここにレストラン1の簡単な説明を書きます。</p>
+                    <p>赤羽駅から徒歩５分/つけ麺、ラーメン</p>
                 </div>
             </div>
-            <!-- 他のレストランも同様に追加 -->
+            <div class="restaurant">
+                <img src="{% static 'foodApp/img/helspo.jpg' %}" alt="レストラン1">
+                <div class="restaurant-info">
+                    <h3>Helspo食堂</h3>
+                    <div class="rating">評価: ★★★☆☆</div>
+                    <p>東洋大学赤羽台キャンパス/食堂</p>
+                </div>
+            </div>
+            <div class="restaurant">
+                <img src="{% static 'foodApp/img/helspo.jpg' %}" alt="レストラン1">
+                <div class="restaurant-info">
+                    <h3>吟風</h3>
+                    <div class="rating">評価: ★★★☆☆</div>
+                    <p>ララガーデン/ラーメン、つけ麺</p>
+                </div>
+            </div>
         </section>
         <footer>
-            <p>&copy; 2023 お店紹介サイト. All rights reserved.</p>
+            <p>© 2023 Class5 Group7. All rights reserved.</p>
         </footer>
         <script src="{% static 'foodApp/js/script.js' %}"></script>
     </body>
 </html>
-</div>
-<!-- 他のレストランも同様に追加 -->
-</section>
-<footer>
-    <p>&copy; 2023 Class5 Group7. All rights reserved.</p>
-</footer>
 <script src="{% static 'foodApp/js/script.js' %}"></script>
-</body>
-</html>
