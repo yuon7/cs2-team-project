@@ -1,162 +1,105 @@
-/* スタイルのリセット */
-body, h1, h2, h3, p, ul {
+/* 基本的なリセットとボックスサイズの設定 */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
-}
-
-/* ナビゲーションバー */
-nav {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-}
-
-nav ul {
-    list-style: none;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 20px;
-}
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
+    color: #333;
 }
 
 /* ヘッダー */
 header {
     background: #f4f4f4;
-    padding: 20px 0;
+    padding: 1rem 0;
     text-align: center;
 }
 
-/* レストランリスト */
-#restaurants {
-    background: #e4e4e4;
-    padding: 20px;
-    text-align: center;
+/* レストランの基本情報 */
+#restaurant-info {
+    background: #fff;
+    padding: 2rem;
+    border-bottom: 1px solid #ccc;
 }
 
-.restaurant {
-    margin-bottom: 20px;
+#restaurant-info h1 {
+    color: #e8491d;
+    margin-bottom: 0.5rem;
 }
 
-.restaurant img {
+/* メニュー */
+#menu {
+    background: #f8f8f8;
+    padding: 2rem;
+}
+
+#menu h2 {
+    margin-bottom: 1rem;
+}
+
+#menu ul {
+    list-style: none;
+}
+
+#menu li {
+    background: #fff;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* 写真ギャラリー */
+#photos {
+    padding: 2rem;
+    background: #f0f0f0;
+}
+
+#photos h2 {
+    margin-bottom: 1rem;
+}
+
+#photos div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+#photos img {
     width: 100%;
     height: auto;
+}
+
+/* レビューセクション */
+#reviews {
+    padding: 2rem;
+}
+
+#reviews h2 {
+    margin-bottom: 1rem;
+}
+
+#reviews article {
+    background: #fff;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* マップ */
+#location {
+    padding: 2rem;
+    background: #e9e9e9;
+}
+
+#location h2 {
+    margin-bottom: 1rem;
 }
 
 /* フッター */
 footer {
-    background-color: #333;
+    background: #333;
     color: #fff;
     text-align: center;
-    padding: 10px 0;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
-
-/* 以前のスタイルに加えて */
-
-.restaurant {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    background: #fff;
-    padding: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.restaurant img {
-    width: 150px;
-    height: 150px;
-    margin-right: 20px;
-}
-
-.restaurant-info {
-    flex: 1;
-}
-/* 以前のスタイルに加えて */
-
-.restaurant {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    background: #fff;
-    padding: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.restaurant img {
-    width: 150px;
-    height: 150px;
-    margin-right: 20px;
-    border-radius: 8px;
-}
-
-.restaurant-info {
-    flex: 1;
-}
-
-.restaurant-info h3 {
-    margin-bottom: 5px;
-}
-
-.rating {
-    margin-bottom: 10px;
-    color: #e67e22;
-    font-weight: bold;
-}
-
-/* レスポンシブデザインのための追加スタイル */
-@media (max-width: 600px) {
-    .restaurant {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .restaurant img {
-        width: 100%;
-        height: auto;
-        margin-bottom: 10px;
-    }
-}
-
-.restaurant-details {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.restaurant-details img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-}
-
-.restaurant-details .info {
-    margin-bottom: 20px;
-}
-
-.restaurant-details .info h3 {
-    margin-bottom: 10px;
-    color: #333;
-    font-size: 1.2em;
-}
-
-.restaurant-details .info p {
-    margin-bottom: 5px;
-    line-height: 1.5;
+    padding: 1rem 0;
 }
