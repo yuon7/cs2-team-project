@@ -62,3 +62,12 @@ def manngetu(request):
 
 def iki(request):
     return render(request, 'foodApp/iki.html')
+
+def ginpu(request):
+    return render(request, "foodApp/ginpu.html")
+
+def himuro(request):
+    return render(request, "foodApp/himuro.html")
+
+def matuya(request):
+    return render(request, "foodApp/matuya.html")
