@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>松屋</title>
+        <link href="{% static 'foodApp/css/template.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <!-- ヘッダー情報、ロゴ、ナビゲーションなど -->
+        </header>
+        <main>
+            <section id="restaurant-info">
+                <h1>松屋</h1>
+                <p>牛丼、カレー</p>
+                <p>~999円</p>
+                <p>最寄り駅：赤羽駅 [東京]</p>
+                <!-- 星評価などの表示もここに含める -->
+            </section>
+            <section id="photos">
+                <!-- 写真ギャラリー -->
+                <h2>写真</h2>
+                <!-- 写真をグリッド表示 -->
+                <div>
+                    <!-- 写真を表示 -->
+                    <img src="photo1.jpg" alt="写真1">
+                    <img src="photo2.jpg" alt="写真2">
+                    <!-- 他の写真 -->
+                </div>
+            </section>
+            <section id="menu">
+                <!-- メニュー情報 -->
+                <h2>メニュー</h2>
+                <!-- メニュー項目をリスト表示 -->
+                <ul>
+                    <li>牛めし</li>
+                    <li>ネギたっぷり旨辛ネギたま牛めし</li>
+                    <li>鬼おろしポン酢牛めし</li>
+                    <li>チーズ牛めし</li>
+                    <li>キムチ牛めし</li>
+                    <li>ネギねぎ牛めし</li>
+                    <li>ネギとろろ牛めし</li>
+                    <li>松屋ビーフカレー</li>
+                    <li>チーズかけビーフカレー</li>
+                    <li>ビーフカレギュウ</li>
+                    <li>ハンバーグビーフカレー</li>
+                    <li>松屋特製ロースかつビーフカレー</li>
+
+
+                    <!-- 他のメニュー項目 -->
+                </ul>
+            </section>
+            <section id="reviews">
+                <!-- レビューセクション -->
+                <h2>レビュー</h2>
+                <!-- レビューを表示 -->
+                <article>
+                    <p>レビュー内容1</p>
+                    <!-- レビュー詳細 -->
+                </article>
+                <article>
+                    <p>レビュー内容2</p>
+                    <!-- レビュー詳細 -->
+                </article>
+                <!-- 他のレビュー -->
+            </section>
+            <section id="location">
+                <!-- マップ情報 -->
+                <h2>場所</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3236.8856287531908!2d139.71671301744385!3d35.778185699999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018931d98d119eb%3A0x3f1012120f5f8a19!2z5p2-5bGLIOi1pOe-veilv-WPo-W6lw!5e0!3m2!1sja!2sjp!4v1704381857624!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <!-- ここにGoogle Mapsなどの埋め込みマップを表示 -->
+            </section>
+        </main>
+        <footer>
+            <!-- フッター情報 -->
+        </footer>
+        <!-- 必要に応じてJavaScriptのリンク -->
+    </body>
+</html>
