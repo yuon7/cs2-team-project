@@ -71,3 +71,6 @@ def himuro(request):
 
 def matuya(request):
     return render(request, "foodApp/matuya.html")
+
+def natsumi(request):
+    return render(request, "foodApp/natsumi.html")

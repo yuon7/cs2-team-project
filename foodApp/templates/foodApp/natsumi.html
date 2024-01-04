@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>{{ restaurant.name }}</title>
+        <link href="{% static 'foodApp/css/template.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <!-- ヘッダー情報、ロゴ、ナビゲーションなど -->
+        </header>
+        <main>
+            <h2>
+                <a href="{% url 'foodApp' %}"><span class="Home">Home</span></a>
+            </h2>
+            <section id="restaurant-info">
+                <h1>夏海</h1>
+                <p>ジャンル・タイプ: 煮干し豚骨・魚介ラーメン</p>
+                <p>価格帯: 1000~</p>
+                <p>〒115-0045 東京都北区赤羽１丁目１８−４</p>
+                <!-- 星評価などの表示もここに含める -->
+            </section>
+            <section id="photos">
+                <h2>写真</h2>
+                <div>
+                    <img src="{% static 'foodApp/img/natsumi1.jpg' %}" alt="写真1">
+                    <img src="{% static 'foodApp/img/natsumi2.jpg' %}" alt="写真2">
+                    <img src="{% static 'foodApp/img/natsumi3.jpg' %}" alt="写真3">
+                </div>
+            </section>
+            <section id="menu">
+                <h2>メニュー</h2>
+                <ul>
+                    <li>煮干し豚骨らぁめん</li>
+                    <li>つけ麺</li>
+                    <li>豊穣清湯醤油ラーメン</li>
+                </ul>
+            </section>
+            <section id="reviews">
+                <!-- レビューセクション -->
+                <h2>レビュー</h2>
+                <!-- レビューを表示 -->
+                <article>
+                    <p>レビュー内容1</p>
+                    <!-- レビュー詳細 -->
+                </article>
+                <article>
+                    <p>レビュー内容2</p>
+                    <!-- レビュー詳細 -->
+                </article>
+                <!-- 他のレビュー -->
+            </section>
+            <section id="location">
+                <!-- マップ情報 -->
+                <h2>場所</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3236.8223007040247!2d139.71761337579218!3d35.779741172555674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018931d1dd5829d%3A0x6e9a459bbeb2fb38!2z6bq65YemIOWkj-a1tw!5e0!3m2!1sja!2sjp!4v1704387051319!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        class="google-map"
+                        width="600"
+                        height="450"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"</iframe>
+            </section>
+        </main>
+        <footer>
+            <!-- フッター情報 -->
+        </footer>
+        <!-- 必要に応じてJavaScriptのリンク -->
+    </body>
+</html>
