@@ -14,7 +14,7 @@
                         <a href="#restaurants">ランキング</a>
                     </li>
                     <li>
-                        <a href="#restaurants">ジャンル</a>
+                        <a href="#ganre">ジャンル</a>
                     </li>
                     <li>
                         <a href="#contact">お問い合わせ</a>
@@ -37,6 +37,26 @@
         </div>
         <section id="restaurants">
             <h2>お店一覧</h2>
+            <a href="{% url 'hayashida' %}">
+                <div class="restaurant">
+                    <img src="{% static 'foodApp/img/haya.png' %}" alt="レストラン1">
+                    <div class="restaurant-info">
+                        <h3>はやし田</h3>
+                        <div class="rating">評価: ★★★☆☆</div>
+                        <p>一番街/ラーメン、つけ麺</p>
+                    </div>
+                </div>
+            </a>
+            <a href="{% url 'danbo' %}">
+                <div class="restaurant">
+                    <img src="{% static 'foodApp/img/danbo.JPG' %}" alt="レストラン1">
+                    <div class="restaurant-info">
+                        <h3>暖母（ダンボ）</h3>
+                        <div class="rating">評価: ★★★☆☆</div>
+                        <p>カフェ・喫茶/パスタ・洋食</p>
+                    </div>
+                </div>
+            </a>
             <a href="{% url 'kyosuke' %}">
                 <div class="restaurant">
                     <img src="{% static 'foodApp/img/kyosuke.png' %}" alt="レストラン1">
@@ -57,16 +77,9 @@
                     </div>
                 </div>
             </a>
-            <a href="{% url 'hayashida' %}">
-                <div class="restaurant">
-                    <img src="{% static 'foodApp/img/helspo.jpg' %}" alt="レストラン1">
-                    <div class="restaurant-info">
-                        <h3>はやし田</h3>
-                        <div class="rating">評価: ★★★☆☆</div>
-                        <p>一番街/ラーメン、つけ麺</p>
-                    </div>
-                </div>
-            </a>
+        </section>
+        <section id="ganre">
+            <h2>ジャンル</h2>
         </section>
         <footer>
             <p>© 2023 Class5 Group7. All rights reserved.</p>

@@ -5,6 +5,10 @@ def index(request):
     return render(request, 'foodApp/index.html')
 
 
+def danbo(request):
+    return render(request, 'foodApp/danbo.html')
+
+
 def hayashida(request):
     return render(request, 'foodApp/hayashida.html')
 
@@ -47,8 +51,11 @@ def wellb_comment(request):
 
 def wellb_photo(request):
     return render(request, "foodApp/wellb_photo.html")
+
+
 def tonnya(request):
-    return render(request,'foodApp/tonnya.html')
+    return render(request, 'foodApp/tonnya.html')
+
 
 def manngetu(request):
-    return render(request,'foodApp/manngetu.html')
+    return render(request, 'foodApp/manngetu.html')

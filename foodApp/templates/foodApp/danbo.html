@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>{{ restaurant.name }}</title>
+        <link href="{% static 'foodApp/css/template.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <!-- ヘッダー情報、ロゴ、ナビゲーションなど -->
+        </header>
+        <main>
+            <h2>
+                <a href="{% url 'foodApp' %}"><span class="Home">Home</span></a>
+            </h2>
+            <section id="restaurant-info">
+                <h1>{{ restaurant.name }}</h1>
+                <p>ジャンル・タイプ: {{ restaurant.genre }}</p>
+                <p>価格帯: {{ restaurant.price_range }}</p>
+                <p>場所: {{ restaurant.location }}</p>
+                <!-- 星評価などの表示もここに含める -->
+            </section>
+            <section id="photos">
+                <h2>写真</h2>
+                <div>
+                    <img src="{% static 'foodApp/img/danbo.JPG' %}" alt="写真1">
+                    <img src="{% static 'foodApp/img/danbo2.JPG' %}" alt="写真2">
+                </div>
+            </section>
+            <section id="menu">
+                <h2>メニュー</h2>
+                <ul>
+                    <li>ナポリタン</li>
+                    <li>ペペロンチーノ</li>
+                    <li>回線クリームパスタ</li>
+                    <li>オムライス定食</li>
+                    <li>ダンボランチ</li>
+                    <li>オムカレー</li>
+                    <li>サラダ</li>
+                </ul>
+            </section>
+            <section id="reviews">
+                <!-- レビューセクション -->
+                <h2>レビュー</h2>
+                <!-- レビューを表示 -->
+                <article>
+                    <p>レビュー内容1</p>
+                    <!-- レビュー詳細 -->
+                </article>
+                <article>
+                    <p>レビュー内容2</p>
+                    <!-- レビュー詳細 -->
+                </article>
+                <!-- 他のレビュー -->
+            </section>
+            <section id="location">
+                <!-- マップ情報 -->
+                <h2>場所</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3236.7654591679816!2d139.71969997579214!3d35.78113727255528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601893032f240001%3A0x5c6d8dd34c694ea1!2z5pqW5q-NIO-8iOODgOODs-ODnO-8iQ!5e0!3m2!1sja!2sjp!4v1704377543133!5m2!1sja!2sjp"
+                        class="google-map"
+                        width="600"
+                        height="450"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </section>
+        </main>
+        <footer>
+            <!-- フッター情報 -->
+        </footer>
+        <!-- 必要に応じてJavaScriptのリンク -->
+    </body>
+</html>
