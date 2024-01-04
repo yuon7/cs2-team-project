@@ -18,4 +18,5 @@ urlpatterns = [
     path("tonnya/", foodApp.views.tonnya, name="tonnya"),
     path("manngetu/", foodApp.views.manngetu, name="manngetu"),
     path("danbo/", foodApp.views.danbo, name="danbo"),
+    path("iki/", foodApp.views.iki, name="iki"),
 ]

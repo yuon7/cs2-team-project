@@ -59,3 +59,6 @@ def tonnya(request):
 
 def manngetu(request):
     return render(request, 'foodApp/manngetu.html')
+
+def iki(request):
+    return render(request, 'foodApp/iki.html')
