@@ -34,20 +34,14 @@ def kyosuke_Comment(request):
 def helspo(request):
     return render(request,'foodApp/helspo.html')
 
-def helspo_comment(request):
-    return render(request,"foodApp/helspo_comment.html")
-
-def helspo_photo(request):
-    return render(request,"foodApp/helspo_photo.html")
-
 def template(request):
     return render(request,'foodApp/template.html')
 
 def wellb(request):
     return render(request,'foodApp/wellb.html')
 
-def wellb_comment(request):
-    return render(request,"foodApp/wellb_comment.html")
+def tonnya(request):
+    return render(request,'foodApp/tonnya.html')
 
-def wellb_photo(request):
-    return render(request,"foodApp/wellb_photo.html")
+def manngetu(request):
+    return render(request,'foodApp/manngetu.html')

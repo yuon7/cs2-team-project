@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>手打ちラーメン　満月</title>
+        <link href="{% static 'foodApp/css/manngetu.css' %}" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+            <!-- ヘッダー情報、ロゴ、ナビゲーションなど -->
+        </header>
+        <main>
+            <section id="restaurant-info">
+                <h1>手打ちラーメン　満月</h1>
+                <p>ジャンル・タイプ: ラーメン</p>
+                <p>価格帯: 1000円~1999円</p>
+                <p>場所: 赤羽駅　徒歩5分</p>
+                <!-- 星評価などの表示もここに含める -->
+            </section>
+            <section id="photos">
+                <!-- 写真ギャラリー -->
+                <h2>写真</h2>
+                <!-- 写真をグリッド表示 -->
+                <div>
+                    <!-- 写真を表示 -->
+                    <img src="{% static 'foodApp/img/manngetu.jpg' %}" alt="写真１">
+                    <img src="{% static 'foodApp/img/manngetu2.jpg' %}" alt="写真2">
+                    <!-- 他の写真 -->
+                </div>
+            </section>
+            <section id="menu">
+                <!-- メニュー情報 -->
+                <h2>メニュー</h2>
+                <!-- メニュー項目をリスト表示 -->
+                <ul>
+                    <li>らーめん</li>
+                    <li>もやしあんかけらーめん</li>
+                    <li>野菜らーめん</li>
+                    <li>わかめらーめん</li>
+                    <li>カレーらーめん</li>
+                    <li>ネギ肉らーめん</li>
+                    <li>白味噌らーめん</li>
+                    <li>野菜白味噌らーめん</li>
+                    <li>角煮らーめん</li>
+                    <li>ちゃーしゅーめん</li>
+                    <li>白味噌ちゃーしゅーめん</li>
+                    <li>他</li>
+
+
+                    <!-- 他のメニュー項目 -->
+                </ul>
+            </section>
+            <section id="reviews">
+                <!-- レビューセクション -->
+                <h2>レビュー</h2>
+                <!-- レビューを表示 -->
+                <article>
+                    <p>レビュー内容1</p>
+                    <!-- レビュー詳細 -->
+                </article>
+                <article>
+                    <p>レビュー内容2</p>
+                    <!-- レビュー詳細 -->
+                </article>
+                <!-- 他のレビュー -->
+            </section>
+            <section id="location">
+                <!-- マップ情報 -->
+                <h2>場所</h2>
+                <!-- ここにGoogle Mapsなどの埋め込みマップを表示 -->
+            </section>
+        </main>
+        <footer>
+            <!-- フッター情報 -->
+        </footer>
+        <!-- 必要に応じてJavaScriptのリンク -->
+    </body>
+</html>
