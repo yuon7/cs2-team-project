@@ -19,4 +19,7 @@ urlpatterns = [
     path("manngetu/", foodApp.views.manngetu, name="manngetu"),
     path("danbo/", foodApp.views.danbo, name="danbo"),
     path("iki/", foodApp.views.iki, name="iki"),
+    path("ginpu/", foodApp.views.iki, name="ginpu"),
+    path("himuro/", foodApp.views.iki, name="himuro"),
+    path("matuya/", foodApp.views.iki, name="matuya"),
 ]
