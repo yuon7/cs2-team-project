@@ -8,6 +8,7 @@ class Restaurant(models.Model):
     genre = models.CharField(max_length=100)
     price_range = models.CharField(max_length=50)
     like = models.IntegerField(default=0)
+    slug = models.CharField(max_length=100, null=True)
 
     def __str__(self):
         return self.name

@@ -43,16 +43,14 @@
             <section id="reviews">
                 <!-- レビューセクション -->
                 <h2>レビュー</h2>
-                <!-- レビューを表示 -->
-                <article>
-                    <p>レビュー内容1</p>
-                    <!-- レビュー詳細 -->
-                </article>
-                <article>
-                    <p>レビュー内容2</p>
-                    <!-- レビュー詳細 -->
-                </article>
-                <!-- 他のレビュー -->
+                {% for review in reviews %}
+                    <div class="review-item">
+                        <h3>{{ review.title }}</h3>
+                        <p>{{ review.comment }}</p>
+                        <p>評価: {{ review.stars }}</p>
+                        <p>投稿時間: {{ review.posted_at }}</p>
+                    </div>
+                {% endfor %}
             </section>
             <section id="location">
                 <!-- マップ情報 -->
@@ -64,6 +62,16 @@
                         allowfullscreen=""
                         loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </section>
+            <section>
+                <div class="form-review">
+                    <form method="post">
+                        <h2>レビューを書く</h2>
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button type="submit">投稿する</button>
+                    </form>
+                </div>
             </section>
         </main>
         <footer>

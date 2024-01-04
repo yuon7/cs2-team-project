@@ -4,47 +4,85 @@ from .forms import ReviewForm
 from .models import Restaurant, Review
 
 
-def get_stars(rating):
-    # 星のリストを生成する関数
-    stars = '★' * rating + '☆' * (5 - rating)
-    return stars
+def get_star_rating(rating):
+    if rating:
+        return int(rating) * "★" + (5 - int(rating)) * "☆"
+    else:
+        return "レビューなし"
 
 
 def index(request):
-    return render(request, 'foodApp/index.html')
+    restaurants = Restaurant.objects.filter(
+        name__in=["はやし田", "暖母", "赤羽京介", "Helspo食堂"])
+    ratings = {
+        restaurant.slug: get_star_rating(Review.objects.filter(
+            restaurant=restaurant).aggregate(Avg('rating'))['rating__avg'])
+        for restaurant in restaurants
+    }
+    return render(request, 'foodApp/index.html', ratings)
 
 
 def danbo(request):
-    return render(request, 'foodApp/danbo.html')
-
-
-def hayashida(request):
-    restaurant = Restaurant.objects.get(name="はやし田")
-    reviews = Review.objects.filter(restaurant=restaurant)
+    danbo = Restaurant.objects.get(name="暖母")
+    reviews = Review.objects.filter(restaurant=danbo)
     average_rating = reviews.aggregate(
         Avg('rating'))['rating__avg']  # 評価の平均を計算
 
     if average_rating is not None:
-        average_rating = round(average_rating, 1)  # 平均評価を1桁に丸める
-        average_stars = get_stars(round(average_rating))  # 平均評価に対する星を生成
+        average_rating = round(average_rating, 1)
+        average_stars = get_star_rating(round(average_rating))
     else:
         average_rating = 'No reviews yet'
 
     for review in reviews:
-        review.stars = get_stars(review.rating)
+        review.stars = get_star_rating(review.rating)
 
     if request.method == "POST":
         form = ReviewForm(request.POST)
         if form.is_valid():
             review = form.save(commit=False)
-            review.restaurant = restaurant
+            review.restaurant = danbo
+            review.save()
+            return redirect('danbo')
+    else:
+        form = ReviewForm()
+
+    return render(request, 'foodApp/danbo.html', {
+        'restaurant': danbo,
+        'reviews': reviews,
+        'average_rating': average_rating,
+        'average_stars': average_stars if average_rating != 'No reviews yet' else 'まだレビューがありません',
+        'form': form
+    })
+
+
+def hayashida(request):
+    hayashida = Restaurant.objects.get(name="はやし田")
+    reviews = Review.objects.filter(restaurant=hayashida)
+    average_rating = reviews.aggregate(
+        Avg('rating'))['rating__avg']  # 評価の平均を計算
+
+    if average_rating is not None:
+        average_rating = round(average_rating, 1)
+        average_stars = get_star_rating(round(average_rating))
+    else:
+        average_rating = 'No reviews yet'
+
+    for review in reviews:
+        review.stars = get_star_rating(review.rating)
+
+    if request.method == "POST":
+        form = ReviewForm(request.POST)
+        if form.is_valid():
+            review = form.save(commit=False)
+            review.restaurant = hayashida
             review.save()
             return redirect('hayashida')
     else:
         form = ReviewForm()
 
     return render(request, 'foodApp/hayashida.html', {
-        'restaurant': restaurant,
+        'restaurant': hayashida,
         'reviews': reviews,
         'average_rating': average_rating,
         'average_stars': average_stars if average_rating != 'No reviews yet' else 'まだレビューがありません',
@@ -56,24 +94,8 @@ def kyosuke(request):
     return render(request, 'foodApp/kyosuke.html')
 
 
-def kyosuke_Photo(request):
-    return render(request, 'foodApp/kyosuke_Photo.html')
-
-
-def kyosuke_Comment(request):
-    return render(request, 'foodApp/kyosuke_Comment.html')
-
-
 def helspo(request):
     return render(request, 'foodApp/helspo.html')
-
-
-def helspo_comment(request):
-    return render(request, "foodApp/helspo_comment.html")
-
-
-def helspo_photo(request):
-    return render(request, "foodApp/helspo_photo.html")
 
 
 def template(request):
@@ -82,14 +104,6 @@ def template(request):
 
 def wellb(request):
     return render(request, 'foodApp/wellb.html')
-
-
-def wellb_comment(request):
-    return render(request, "foodApp/wellb_comment.html")
-
-
-def wellb_photo(request):
-    return render(request, "foodApp/wellb_photo.html")
 
 
 def tonnya(request):
