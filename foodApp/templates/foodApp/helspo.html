@@ -1,49 +1,74 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>HELSPO食堂</title>
+        <link href="{% static 'foodApp/css/helspo.css' %}" rel="stylesheet">
+    </head>
 
-<head>
-    <title>HELSPO</title>
-    <meta charset="utf-8">
-    <link href="{% static 'foodApp/css/helspo.css' %}"rel="stylesheet">
-</head>
+    <body>
+        <header>
+            <!-- ヘッダー情報、ロゴ、ナビゲーションなど -->
+        </header>
+        <main>
+            <section id="restaurant-info">
+                <h1>HELSPO食堂</h1>
+                <p>ジャンル・タイプ: 定食、ラーメン</p>
+                <p>価格帯: ~600円</p>
+                <p>場所: 東洋大学赤羽台キャンパス　HELSPO</p>
+                <!-- 星評価などの表示もここに含める -->
+            </section>
+            <section id="photos">
+                <!-- 写真ギャラリー -->
+                <h2>写真</h2>
+                <!-- 写真をグリッド表示 -->
+                <div>
+                    <!-- 写真を表示 -->
+                    <img src="{% static 'foodApp/img/helspo.jpg' %}" alt="写真１">
+                    <img src="{% static 'foodApp/img/helspo2.jpg' %}" alt="写真2">
+                    <!-- 他の写真 -->
+                </div>
+            </section>
+            <section id="menu">
+                <!-- メニュー情報 -->
+                <h2>メニュー</h2>
+                <!-- メニュー項目をリスト表示 -->
+                <ul>
+                    <li>日替わり定食A</li>
+                    <li>日替わり定食B</li>
+                    <li>日替わり丼</li>
+                    <li>ラーメン</li>
+                    <li>うどん</li>
+                    <li>そば</li>
+                    <li>カレー</li>
 
-<body>
-    <h2>食べログ</h2>
-    <hr>
-    <h1>HELSPO学食 東洋大学赤羽台キャンパス</h1>
-    <h3>(ヘルスポガクショク)</h3>
-    <h4>赤羽駅/定食、ラーメン</h4>
-    <hr>
-
-    <h3>~600円</h3>
-
-    <ul>
-        <li>
-            <a href="{% url 'helspo' %}">トップ</a>
-        </li>
-        <li>
-            <a href="{% url 'helspo_photo' %}">写真</a>
-        </li>
-        <li>
-            <a href="{% url 'helspo_comment' %}">コメント</a>
-        </li>
-    </ul>
-    <h2>
-        東洋大学赤羽台キャンパスHELSPOの学食！！
-    </h2>
-    <p>2023年1月に完成した東洋大学赤羽台キャンパスのHub-3、HELSPOの学食</p>
-    <ul>
-        <li>
-            月～金：11時00分~14時00分
-        </li>
-        <li>
-            土:11時00分~14時00分
-        </li>
-        <li>
-            日・祝日:休業
-        </li>
-    </ul>
-</body>
-
+                    <!-- 他のメニュー項目 -->
+                </ul>
+            </section>
+            <section id="reviews">
+                <!-- レビューセクション -->
+                <h2>レビュー</h2>
+                <!-- レビューを表示 -->
+                <article>
+                    <p>レビュー内容1</p>
+                    <!-- レビュー詳細 -->
+                </article>
+                <article>
+                    <p>レビュー内容2</p>
+                    <!-- レビュー詳細 -->
+                </article>
+                <!-- 他のレビュー -->
+            </section>
+            <section id="location">
+                <!-- マップ情報 -->
+                <h2>場所</h2>
+                <!-- ここにGoogle Mapsなどの埋め込みマップを表示 -->
+            </section>
+        </main>
+        <footer>
+            <!-- フッター情報 -->
+        </footer>
+        <!-- 必要に応じてJavaScriptのリンク -->
+    </body>
 </html>

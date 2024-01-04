@@ -47,3 +47,8 @@ def wellb_comment(request):
 
 def wellb_photo(request):
     return render(request, "foodApp/wellb_photo.html")
+def tonnya(request):
+    return render(request,'foodApp/tonnya.html')
+
+def manngetu(request):
+    return render(request,'foodApp/manngetu.html')
