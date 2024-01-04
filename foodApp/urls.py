@@ -15,4 +15,7 @@ urlpatterns = [
     path("wellb/", foodApp.views.wellb, name="wellb"),
     path("wellb_comment/", foodApp.views.wellb_comment, name="wellb_comment"),
     path("wellb_photo/", foodApp.views.wellb_photo, name="wellb_photo"),
+    path("tonnya/", foodApp.views.tonnya, name="tonnya"),
+    path("manngetu/", foodApp.views.manngetu, name="manngetu"),
+    path("danbo/", foodApp.views.danbo, name="danbo"),
 ]
