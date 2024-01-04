@@ -1,46 +1,54 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="ja">
-
-<head>
-    <title>京介</title>
-    <meta charset="utf-8">
-    <link href="{% static 'foodApp/css/kyosuke.css' %}" rel="stylesheet">
-
-</head>
-
-<body>
-    <h2><a href="{% url 'foodApp' %}"><span class="Home">Home</span></a></h2>
-    <hr>
-    <h2>赤羽京介</h2>
-    <p>最寄り駅：赤羽駅 [ 東京都 ], ジャンル：つけ麺</p>
-    <p>予算：￥900～,  定休日：年末年始</p>
-    
-    <ul>
-        <li>
-            <a href="{% url 'kyosuke' %}"><span class="Top">トップ</span></a>
-        </li>
-        <li>
-            <a href="{% url 'kyosuke_Photo' %}"><span class="Photo">写真</span></a>
-        </li>
-        <li>
-            <a href="{% url 'kyosuke_Comment' %}"><span class="Comment">口コミ</span></a>
-        </li>
-    </ul>
-    <hr>
-    
-    <p>写真</p>
-    <ul>
-        <div class="kyosuke"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf37Eda8kUOgIncVynAE_AS0yirY5lgmsbMw&usqp=CAU"></div>
-        <div class="kyosuke"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf37Eda8kUOgIncVynAE_AS0yirY5lgmsbMw&usqp=CAU"></div>
-        <div class="kyosuke"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf37Eda8kUOgIncVynAE_AS0yirY5lgmsbMw&usqp=CAU"></div>
-    </ul>
-    <ul>
-        <div class="kyosuke"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf37Eda8kUOgIncVynAE_AS0yirY5lgmsbMw&usqp=CAU"></div>
-        <div class="kyosuke"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf37Eda8kUOgIncVynAE_AS0yirY5lgmsbMw&usqp=CAU"></div>
-        <div class="kyosuke"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf37Eda8kUOgIncVynAE_AS0yirY5lgmsbMw&usqp=CAU"></div>
-    </ul>
-    <h3>口コミ</h3>
-
-</body>
+    <head>
+        <title>京介</title>
+        <meta charset="utf-8">
+        <link href="{% static 'foodApp/css/kyosuke.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        <h2>
+            <a href="{% url 'foodApp' %}"><span class="Home">Home</span></a>
+        </h2>
+        <hr>
+        <h2>赤羽京介</h2>
+        <p>最寄り駅：赤羽駅 [ 東京都 ], ジャンル：つけ麺</p>
+        <p>予算：￥900～,  定休日：年末年始</p>
+        <ul>
+            <li>
+                <a href="{% url 'kyosuke' %}"><span class="Top">トップ</span></a>
+            </li>
+            <li>
+                <a href="{% url 'kyosuke_Photo' %}"><span class="Photo">写真</span></a>
+            </li>
+            <li>
+                <a href="{% url 'kyosuke_Comment' %}"><span class="Comment">口コミ</span></a>
+            </li>
+        </ul>
+        <hr>
+        <p>写真</p>
+        <ul>
+            <div class="kyosuke">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf37Eda8kUOgIncVynAE_AS0yirY5lgmsbMw&usqp=CAU">
+            </div>
+            <div class="kyosuke">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf37Eda8kUOgIncVynAE_AS0yirY5lgmsbMw&usqp=CAU">
+            </div>
+            <div class="kyosuke">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf37Eda8kUOgIncVynAE_AS0yirY5lgmsbMw&usqp=CAU">
+            </div>
+        </ul>
+        <ul>
+            <div class="kyosuke">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf37Eda8kUOgIncVynAE_AS0yirY5lgmsbMw&usqp=CAU">
+            </div>
+            <div class="kyosuke">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf37Eda8kUOgIncVynAE_AS0yirY5lgmsbMw&usqp=CAU">
+            </div>
+            <div class="kyosuke">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf37Eda8kUOgIncVynAE_AS0yirY5lgmsbMw&usqp=CAU">
+            </div>
+        </ul>
+        <h3>口コミ</h3>
+    </body>
 </html>

@@ -16,9 +16,22 @@ body {
     min-height: 100vh;
 }
 
+a {
+    text-decoration: none; /* リンクのデフォルトの下線をなくす */
+    text-align: center;
+    color: rgb(239, 203, 142); /* リンクのデフォルトの色を設定 */
+  }
+
+.google-map {
+    border: 0;
+    width: 100%;
+    max-width: 600px; /* 最大の幅を指定 */
+    height: 450px; /* 高さを指定 */
+}
+
 main {
     flex: 1;
-    width: 90%; /* ここを調整してコンテンツの幅を設定 */
+    width: 75%; /* ここを調整してコンテンツの幅を設定 */
     max-width: 1200px; /* または好みの最大幅を設定 */
     margin: 0 auto; /* これにより左右のマージンが自動で調整される */
     padding: 20px; /* 内容との間隔 */

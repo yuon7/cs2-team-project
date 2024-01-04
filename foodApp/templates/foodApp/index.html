@@ -37,30 +37,36 @@
         </div>
         <section id="restaurants">
             <h2>お店一覧</h2>
-            <div class="restaurant">
-                <img src="{% static 'foodApp/img/kyosuke.png' %}" alt="レストラン1">
-                <div class="restaurant-info">
-                    <h3>赤羽京介</h3>
-                    <div class="rating">評価: ★★★★☆</div>
-                    <p>赤羽駅から徒歩５分/つけ麺、ラーメン</p>
+            <a href="{% url 'kyosuke' %}">
+                <div class="restaurant">
+                    <img src="{% static 'foodApp/img/kyosuke.png' %}" alt="レストラン1">
+                    <div class="restaurant-info">
+                        <h3>赤羽京介</h3>
+                        <div class="rating">評価: ★★★★☆</div>
+                        <p>赤羽駅から徒歩５分/つけ麺、ラーメン</p>
+                    </div>
                 </div>
-            </div>
-            <div class="restaurant">
-                <img src="{% static 'foodApp/img/helspo.jpg' %}" alt="レストラン1">
-                <div class="restaurant-info">
-                    <h3>Helspo食堂</h3>
-                    <div class="rating">評価: ★★★☆☆</div>
-                    <p>東洋大学赤羽台キャンパス/食堂</p>
+            </a>
+            <a href="{% url 'helspo' %}">
+                <div class="restaurant">
+                    <img src="{% static 'foodApp/img/helspo.jpg' %}" alt="レストラン1">
+                    <div class="restaurant-info">
+                        <h3>Helspo食堂</h3>
+                        <div class="rating">評価: ★★★☆☆</div>
+                        <p>東洋大学赤羽台キャンパス/食堂</p>
+                    </div>
                 </div>
-            </div>
-            <div class="restaurant">
-                <img src="{% static 'foodApp/img/helspo.jpg' %}" alt="レストラン1">
-                <div class="restaurant-info">
-                    <h3>吟風</h3>
-                    <div class="rating">評価: ★★★☆☆</div>
-                    <p>ララガーデン/ラーメン、つけ麺</p>
+            </a>
+            <a href="{% url 'hayashida' %}">
+                <div class="restaurant">
+                    <img src="{% static 'foodApp/img/helspo.jpg' %}" alt="レストラン1">
+                    <div class="restaurant-info">
+                        <h3>はやし田</h3>
+                        <div class="rating">評価: ★★★☆☆</div>
+                        <p>一番街/ラーメン、つけ麺</p>
+                    </div>
                 </div>
-            </div>
+            </a>
         </section>
         <footer>
             <p>© 2023 Class5 Group7. All rights reserved.</p>
