@@ -27,20 +27,54 @@
             <a href="{% url 'kyosuke_Comment' %}"><span class="Comment">口コミ</span></a>
         </li>
     </ul>
-    <hr>
     
-    <p>写真</p>
+    <div class="kyosuke1">
+        <div class="img2"><img src="{% static 'foodApp/img/kyosuke.png' %}"></div> 
+        <div class="img2"><img src="{% static 'foodApp/img/kyosukemap.png' %}"></div>
+    </div>
+    
+
+    <hr>
+    <div class="space">
     <ul>
-        <div class="kyosuke"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf37Eda8kUOgIncVynAE_AS0yirY5lgmsbMw&usqp=CAU"></div>
-        <div class="kyosuke"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf37Eda8kUOgIncVynAE_AS0yirY5lgmsbMw&usqp=CAU"></div>
-        <div class="kyosuke"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf37Eda8kUOgIncVynAE_AS0yirY5lgmsbMw&usqp=CAU"></div>
+        <div class="img1"><img src="{% static 'foodApp/img/kyosuke1.jpg' %}" alt="写真１"></div> 
+        <div class="img1"><img src="{% static 'foodApp/img/kyosuke2.jpg' %}" alt="写真１"></div>        
     </ul>
-    <ul>
-        <div class="kyosuke"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf37Eda8kUOgIncVynAE_AS0yirY5lgmsbMw&usqp=CAU"></div>
-        <div class="kyosuke"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf37Eda8kUOgIncVynAE_AS0yirY5lgmsbMw&usqp=CAU"></div>
-        <div class="kyosuke"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf37Eda8kUOgIncVynAE_AS0yirY5lgmsbMw&usqp=CAU"></div>
-    </ul>
+    </div>
+
+   
+    
+    <style>
+        .img1 img {
+          width: 300px; /* 例: 幅を200pxに指定 */
+          height: auto; /* 高さは自動調整 */
+          padding: 20px;
+        }
+        .img2 img{
+            width: 400px;
+            height: 300px;
+        }
+
+        .kyosuke1 {
+            display: flex;
+        }
+
+        .img2 {
+            margin-right: 30px; /* 画像間の余白を調整する場合は適宜設定 */
+        }
+
+        .img2 img {
+
+            display: block; /* インライン要素として表示される余白を除去 */
+        }
+
+    </style>
+    <div class="more"><a href="{% url 'kyosuke_Photo' %}">もっと見る</a></div>
+    
+    <hr>
+
     <h3>口コミ</h3>
+    <div class="more"><a href="{% url 'kyosuke_Comment' %}">もっと見る</a></div>
 
 </body>
 </html>

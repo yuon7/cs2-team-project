@@ -15,7 +15,7 @@ h2{
   
   a {
     text-decoration: none; /* リンクのデフォルトの下線をなくす */
-    color: rgb(239, 203, 142); /* リンクのデフォルトの色を設定 */
+    color: rgb(153, 174, 239); /* リンクのデフォルトの色を設定 */
   }
   
   a:hover {
@@ -29,7 +29,6 @@ ul {
     list-style: none;
     display: flex; /* Flexboxを使用して横並びにする */
     margin-left: 10px;
-    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -51,6 +50,7 @@ li{
 
 
 body{
+  background-color: rgb(247, 238, 225);
   margin-left: 20px;
   margin-right: 20px;
 }
@@ -58,3 +58,10 @@ body{
 .kyosuke{
   padding: 10px
 }
+
+.more{
+  padding-left: 140px;
+}
+
+
+
