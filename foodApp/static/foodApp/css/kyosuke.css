@@ -1,67 +1,133 @@
-h2{
-    color: rgb(16, 16, 16);
-   }
-
-
-
-h2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+/* 基本的なリセットとボックスサイズの設定 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-
-  
-  a {
-    text-decoration: none; /* リンクのデフォルトの下線をなくす */
-    color: rgb(153, 174, 239); /* リンクのデフォルトの色を設定 */
-  }
-  
-  a:hover {
-    color: blue; /* マウスがリンク上にあるときの色を設定 */
-  }
-
-  
-
-ul {
-    position: center;
-    list-style: none;
-    display: flex; /* Flexboxを使用して横並びにする */
-    margin-left: 10px;
-    justify-content: center;
-    align-items: center;
+body {
+  font-family:'Yu Mincho','游明朝','メイリオ', 'Meiryo', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-
-
-li{
-    border: 1.5px solid #805353; /* ボーダーを追加 */
-    padding: 15px;
-    border-bottom: 2px solid #2e1f1f;
+a {
+  text-decoration: none; /* リンクのデフォルトの下線をなくす */
+  text-align: center;
+  color: rgb(239, 203, 142); /* リンクのデフォルトの色を設定 */
 }
 
-.Top,
-.Photo,
-.Comment {
- margin-right: 10px; 
- font-size: 35px;
+.google-map {
+  border: 0;
+  width: 100%;
+  max-width: 600px; /* 最大の幅を指定 */
+  height: 450px; /* 高さを指定 */
 }
 
-
-body{
-  background-color: rgb(247, 238, 225);
-  margin-left: 20px;
-  margin-right: 20px;
+main {
+  flex: 1;
+  width: 75%; /* ここを調整してコンテンツの幅を設定 */
+  max-width: 1200px; /* または好みの最大幅を設定 */
+  margin: 0 auto; /* これにより左右のマージンが自動で調整される */
+  padding: 20px; /* 内容との間隔 */
 }
 
-.kyosuke{
-  padding: 10px
+/* その他のスタイリング */
+
+/* ヘッダー */
+header {
+  background: #f4f4f4;
+  padding: 1rem 0;
+  text-align: center;
 }
 
-.more{
-  padding-left: 140px;
+/* レストランの基本情報 */
+#restaurant-info {
+  background: #fff;
+  padding: 2rem;
+  border-bottom: 1px solid #ccc;
 }
 
+#restaurant-info h1 {
+  color: #e8491d;
+  margin-bottom: 0.5rem;
+}
 
+/* メニュー */
+#menu {
+  background: #f8f8f8;
+  padding: 2rem;
+}
 
+#menu h2 {
+  margin-bottom: 1rem;
+}
+
+#menu ul {
+  list-style: none;
+}
+
+#menu li {
+  background: #fff;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* 写真ギャラリー */
+#photos {
+  padding: 2rem;
+  background: #f0f0f0;
+}
+
+#photos h2 {
+  margin-bottom: 1rem;
+}
+
+#photos div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+#photos img {
+  width: 100%;
+  height: auto;
+}
+
+/* レビューセクション */
+#reviews {
+  padding: 2rem;
+}
+
+#reviews h2 {
+  margin-bottom: 1rem;
+}
+
+#reviews article {
+  background: #fff;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* マップ */
+#location {
+  padding: 2rem;
+  background: #e9e9e9;
+}
+
+#location h2 {
+  margin-bottom: 1rem;
+}
+
+/* フッター */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+}

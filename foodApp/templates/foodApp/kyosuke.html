@@ -1,80 +1,84 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>赤羽京介</title>
+        <link href="{% static 'foodApp/css/template.css' %}" rel="stylesheet">
+    </head>
 
-<head>
-    <title>京介</title>
-    <meta charset="utf-8">
-    <link href="{% static 'foodApp/css/kyosuke.css' %}" rel="stylesheet">
+    <body>
+        <header>
+            <!-- ヘッダー情報、ロゴ、ナビゲーションなど -->
+        </header>
+        <main>
+            <h2>
+                <a href="{% url 'foodApp' %}"><span class="Home">Home</span></a>
+            </h2>
+            <section id="restaurant-info">
+                <h1>赤羽京介</h1>
+                <p>ジャンル・タイプ: 定食、ラーメン</p>
+                <p>価格帯: 900円~</p>
+                <p>場所: 〒115-0055 東京都北区赤羽西１丁目７−１</p>
+                <!-- 星評価などの表示もここに含める -->
+            </section>
+            <section id="photos">
+                <!-- 写真ギャラリー -->
+                <h2>写真</h2>
+                <!-- 写真をグリッド表示 -->
+                <div>
+                    <!-- 写真を表示 -->
+                    <img src="{% static 'foodApp/img/kyosuke1.jpg' %}" alt="写真１">
+                    <img src="{% static 'foodApp/img/kyosuke2.jpg' %}" alt="写真2">
+                    <!-- 他の写真 -->
+                </div>
+            </section>
+            <section id="menu">
+                <!-- メニュー情報 -->
+                <h2>メニュー</h2>
+                <!-- メニュー項目をリスト表示 -->
+                <ul>
+                    <li>京介魚介つけ麺</li>
+                    <li>京介魚介ラーメン</li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
 
-</head>
-
-<body>
-    <h2><a href="{% url 'foodApp' %}"><span class="Home">Home</span></a></h2>
-    <hr>
-    <h2>赤羽京介</h2>
-    <p>最寄り駅：赤羽駅 [ 東京都 ], ジャンル：つけ麺</p>
-    <p>予算：￥900～,  定休日：年末年始</p>
-    
-    <ul>
-        <li>
-            <a href="{% url 'kyosuke' %}"><span class="Top">トップ</span></a>
-        </li>
-        <li>
-            <a href="{% url 'kyosuke_Photo' %}"><span class="Photo">写真</span></a>
-        </li>
-        <li>
-            <a href="{% url 'kyosuke_Comment' %}"><span class="Comment">口コミ</span></a>
-        </li>
-    </ul>
-    
-    <div class="kyosuke1">
-        <div class="img2"><img src="{% static 'foodApp/img/kyosuke.png' %}"></div> 
-        <div class="img2"><img src="{% static 'foodApp/img/kyosukemap.png' %}"></div>
-    </div>
-    
-
-    <hr>
-    <div class="space">
-    <ul>
-        <div class="img1"><img src="{% static 'foodApp/img/kyosuke1.jpg' %}" alt="写真１"></div> 
-        <div class="img1"><img src="{% static 'foodApp/img/kyosuke2.jpg' %}" alt="写真１"></div>        
-    </ul>
-    </div>
-
-   
-    
-    <style>
-        .img1 img {
-          width: 300px; /* 例: 幅を200pxに指定 */
-          height: auto; /* 高さは自動調整 */
-          padding: 20px;
-        }
-        .img2 img{
-            width: 400px;
-            height: 300px;
-        }
-
-        .kyosuke1 {
-            display: flex;
-        }
-
-        .img2 {
-            margin-right: 30px; /* 画像間の余白を調整する場合は適宜設定 */
-        }
-
-        .img2 img {
-
-            display: block; /* インライン要素として表示される余白を除去 */
-        }
-
-    </style>
-    <div class="more"><a href="{% url 'kyosuke_Photo' %}">もっと見る</a></div>
-    
-    <hr>
-
-    <h3>口コミ</h3>
-    <div class="more"><a href="{% url 'kyosuke_Comment' %}">もっと見る</a></div>
-
-</body>
+                    <!-- 他のメニュー項目 -->
+                </ul>
+            </section>
+            <section id="reviews">
+                <!-- レビューセクション -->
+                <h2>レビュー</h2>
+                <!-- レビューを表示 -->
+                <article>
+                    <p>レビュー内容1</p>
+                    <!-- レビュー詳細 -->
+                </article>
+                <article>
+                    <p>レビュー内容2</p>
+                    <!-- レビュー詳細 -->
+                </article>
+                <!-- 他のレビュー -->
+            </section>
+            <section id="location">
+                <!-- マップ情報 -->
+                <h2>場所</h2>
+                <iframe src="a">
+                    class="google-map"
+                    width="600"
+                    height="450"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"</iframe>
+                <!-- ここにGoogle Mapsなどの埋め込みマップを表示 -->
+            </section>
+        </main>
+        <footer>
+            <!-- フッター情報 -->
+        </footer>
+        <!-- 必要に応じてJavaScriptのリンク -->
+    </body>
 </html>
