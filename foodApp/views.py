@@ -91,11 +91,71 @@ def hayashida(request):
 
 
 def kyosuke(request):
-    return render(request, 'foodApp/kyosuke.html')
+    kyosuke = Restaurant.objects.get(name="赤羽京介")
+    kyosuke_reviews = Review.objects.filter(restaurant=kyosuke)
+    average_rating = kyosuke_reviews.aggregate(
+        Avg('rating'))['rating__avg']
+
+    if average_rating is not None:
+        average_rating = round(average_rating, 1)
+        average_stars = get_star_rating(round(average_rating))
+    else:
+        average_rating = 'No reviews yet'
+
+    for review in kyosuke_reviews:
+        review.stars = get_star_rating(review.rating)
+
+    if request.method == "POST":
+        form = ReviewForm(request.POST)
+        if form.is_valid():
+            review = form.save(commit=False)
+            review.restaurant = kyosuke
+            review.save()
+            return redirect('kyosuke')
+    else:
+        form = ReviewForm()
+
+    return render(request, 'foodApp/kyosuke.html', {
+        'restaurant': kyosuke,
+        'reviews': kyosuke_reviews,
+        'average_rating': average_rating,
+        'average_stars': average_stars if average_rating != 'No reviews yet' else 'まだレビューがありません',
+        'form': form
+    })
 
 
 def helspo(request):
-    return render(request, 'foodApp/helspo.html')
+    helspo = Restaurant.objects.get(name="Helspo食堂")
+    helspo_reviews = Review.objects.filter(restaurant=helspo)
+    average_rating = helspo_reviews.aggregate(
+        Avg('rating'))['rating__avg']
+
+    if average_rating is not None:
+        average_rating = round(average_rating, 1)
+        average_stars = get_star_rating(round(average_rating))
+    else:
+        average_rating = 'No reviews yet'
+
+    for review in helspo_reviews:
+        review.stars = get_star_rating(review.rating)
+
+    if request.method == "POST":
+        form = ReviewForm(request.POST)
+        if form.is_valid():
+            review = form.save(commit=False)
+            review.restaurant = helspo
+            review.save()
+            return redirect('helspo')
+    else:
+        form = ReviewForm()
+
+    return render(request, 'foodApp/helspo.html', {
+        'restaurant': helspo,
+        'reviews': helspo_reviews,
+        'average_rating': average_rating,
+        'average_stars': average_stars if average_rating != 'No reviews yet' else 'まだレビューがありません',
+        'form': form
+    })
 
 
 def template(request):
@@ -103,7 +163,37 @@ def template(request):
 
 
 def wellb(request):
-    return render(request, 'foodApp/wellb.html')
+    wellb = Restaurant.objects.get(name="WellB食堂")
+    wellb_reviews = Review.objects.filter(restaurant=wellb)
+    average_rating = wellb_reviews.aggregate(
+        Avg('rating'))['rating__avg']
+
+    if average_rating is not None:
+        average_rating = round(average_rating, 1)
+        average_stars = get_star_rating(round(average_rating))
+    else:
+        average_rating = 'No reviews yet'
+
+    for review in wellb_reviews:
+        review.stars = get_star_rating(review.rating)
+
+    if request.method == "POST":
+        form = ReviewForm(request.POST)
+        if form.is_valid():
+            review = form.save(commit=False)
+            review.restaurant = wellb
+            review.save()
+            return redirect('wellb')
+    else:
+        form = ReviewForm()
+
+    return render(request, 'foodApp/helspo.html', {
+        'restaurant': wellb,
+        'reviews': wellb_reviews,
+        'average_rating': average_rating,
+        'average_stars': average_stars if average_rating != 'No reviews yet' else 'まだレビューがありません',
+        'form': form
+    })
 
 
 def tonnya(request):

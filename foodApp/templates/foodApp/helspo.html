@@ -4,13 +4,16 @@
     <head>
         <meta charset="UTF-8">
         <title>HELSPO食堂</title>
-        <link href="{% static 'foodApp/css/helspo.css' %}" rel="stylesheet">
+        <link href="{% static 'foodApp/css/template.css' %}" rel="stylesheet">
     </head>
     <body>
         <header>
             <!-- ヘッダー情報、ロゴ、ナビゲーションなど -->
         </header>
         <main>
+            <h2>
+                <a href="{% url 'foodApp' %}"><span class="Home">Home</span></a>
+            </h2>
             <section id="restaurant-info">
                 <h1>HELSPO食堂</h1>
                 <p>ジャンル・タイプ: 定食、ラーメン</p>

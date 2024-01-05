@@ -44,24 +44,29 @@
                     <li>ネギつけ麺</li>
                     <li>チャーシューつけ麺</li>
                     <li>餃子</li>
-                    
-
                     <!-- 他のメニュー項目 -->
                 </ul>
-                <section>
-                    <div class="form-review">
-                        <form method="post">
-                            <h2>レビューを書く</h2>
-                            {% csrf_token %}
-                            {{ form.as_p }}
-                            <button type="submit">投稿する</button>
-                        </form>
-                    </div>
-                </section>
+            </section>
+            <section>
+                <div class="form-review">
+                    <form method="post">
+                        <h2>レビューを書く</h2>
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button type="submit">投稿する</button>
+                    </form>
+                </div>
+            </section>
             <section id="location">
                 <!-- マップ情報 -->
                 <h2>場所</h2>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3236.880630393331!2d139.72163172559638!3d35.77830847255614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601893028001c465%3A0x6226e107fa1cacf3!2z5ZCf6aKoIOi1pOe-veW6lw!5e0!3m2!1sja!2sjp!4v1704381503933!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3236.880630393331!2d139.72163172559638!3d35.77830847255614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601893028001c465%3A0x6226e107fa1cacf3!2z5ZCf6aKoIOi1pOe-veW6lw!5e0!3m2!1sja!2sjp!4v1704381503933!5m2!1sja!2sjp"
+                        class="google-map"
+                        width="600"
+                        height="450"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
                 <!-- ここにGoogle Mapsなどの埋め込みマップを表示 -->
             </section>
         </main>

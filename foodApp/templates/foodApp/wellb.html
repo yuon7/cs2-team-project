@@ -6,12 +6,14 @@
         <title>WELLB食堂</title>
         <link href="{% static 'foodApp/css/wellb.css' %}" rel="stylesheet">
     </head>
-
     <body>
         <header>
             <!-- ヘッダー情報、ロゴ、ナビゲーションなど -->
         </header>
         <main>
+            <h2>
+                <a href="{% url 'foodApp' %}"><span class="Home">Home</span></a>
+            </h2>
             <section id="restaurant-info">
                 <h1>WELLB食堂</h1>
                 <p>ジャンル・タイプ: 定食、ラーメン</p>
@@ -42,35 +44,43 @@
                     <li>ラーメン</li>
                     <li>パスタ</li>
                     <li>どんぶり</li>
-
                     <!-- 他のメニュー項目 -->
                 </ul>
             </section>
             <section id="reviews">
                 <!-- レビューセクション -->
                 <h2>レビュー</h2>
-                <!-- レビューを表示 -->
-                <article>
-                    <p>レビュー内容1</p>
-                    <!-- レビュー詳細 -->
-                </article>
-                <article>
-                    <p>レビュー内容2</p>
-                    <!-- レビュー詳細 -->
-                </article>
-                <!-- 他のレビュー -->
+                {% for review in reviews %}
+                    <div class="review-item">
+                        <h3>{{ review.title }}</h3>
+                        <p>{{ review.comment }}</p>
+                        <p>評価: {{ review.stars }}</p>
+                        <p>投稿時間: {{ review.posted_at }}</p>
+                    </div>
+                {% endfor %}
             </section>
             <section id="location">
                 <!-- マップ情報 -->
                 <h2>場所</h2>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1618.411265270072!2d139.71508628769138!3d35.77973552739414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601893af5d772e0b%3A0x8327222f776d5a8f!2z5p2x5rSL5aSn5a2m44Op44Kk44OV44OH44K244Kk44Oz5a2m6YOoKFdFTExCIEhVQi0yKQ!5e0!3m2!1sja!2sjp!4v1704383486474!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                    class="google-map"
-                    width="600"
-                    height="450"
-                    allowfullscreen=""
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"</iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1618.411265270072!2d139.71508628769138!3d35.77973552739414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601893af5d772e0b%3A0x8327222f776d5a8f!2z5p2x5rSL5aSn5a2m44Op44Kk44OV44OH44K244Kk44Oz5a2m6YOoKFdFTExCIEhVQi0yKQ!5e0!3m2!1sja!2sjp!4v1704383486474!5m2!1sja!2sjp"
+                        class="google-map"
+                        width="600"
+                        height="450"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
                 <!-- ここにGoogle Mapsなどの埋め込みマップを表示 -->
+            </section>
+            <section>
+                <div class="form-review">
+                    <form method="post">
+                        <h2>レビューを書く</h2>
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button type="submit">投稿する</button>
+                    </form>
+                </div>
             </section>
         </main>
         <footer>
