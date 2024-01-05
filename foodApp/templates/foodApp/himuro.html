@@ -45,23 +45,30 @@
                     <li>キムチらーめん</li>
                     <li>ひむろ特性つけ麺</li>
                     <li>辛味噌つけ麺</li>
-                    
                     <!-- 他のメニュー項目 -->
                 </ul>
-                <section>
-                    <div class="form-review">
-                        <form method="post">
-                            <h2>レビューを書く</h2>
-                            {% csrf_token %}
-                            {{ form.as_p }}
-                            <button type="submit">投稿する</button>
-                        </form>
-                    </div>
-                </section>
+            </section>
+            <section>
+                <div class="form-review">
+                    <form method="post">
+                        <h2>レビューを書く</h2>
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button type="submit">投稿する</button>
+                    </form>
+                </div>
+            </section>
             <section id="location">
                 <!-- マップ情報 -->
                 <h2>場所</h2>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3236.8190139775343!2d139.72076!3d35.7798219!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018931d2475cd1b%3A0x82243bffd8ff0be!2z5YyX5rW36YGT44KJ44O844KB44KTIOOBsuOCgOOCjSDotaTnvr3lupc!5e0!3m2!1sja!2sjp!4v1704381902012!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3236.8190139775343!2d139.72076!3d35.7798219!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018931d2475cd1b%3A0x82243bffd8ff0be!2z5YyX5rW36YGT44KJ44O844KB44KTIOOBsuOCgOOCjSDotaTnvr3lupc!5e0!3m2!1sja!2sjp!4v1704381902012!5m2!1sja!2sjp"
+                        class="google-map"
+                        width="600"
+                        height="450"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
                 <!-- ここにGoogle Mapsなどの埋め込みマップを表示 -->
             </section>
         </main>
