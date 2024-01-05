@@ -187,7 +187,7 @@ def wellb(request):
     else:
         form = ReviewForm()
 
-    return render(request, 'foodApp/helspo.html', {
+    return render(request, 'foodApp/wellb.html', {
         'restaurant': wellb,
         'reviews': wellb_reviews,
         'average_rating': average_rating,

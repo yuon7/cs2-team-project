@@ -77,6 +77,16 @@
                     </div>
                 </div>
             </a>
+            <a href="{% url 'wellb' %}">
+                <div class="restaurant">
+                    <img src="{% static 'foodApp/img/wellb.png' %}" alt="レストラン1">
+                    <div class="restaurant-info">
+                        <h3>WellB食堂</h3>
+                        <div class="rating">{{ wellb|default:"レビューなし" }}</div>
+                        <p>東洋大学赤羽台キャンパス/食堂</p>
+                    </div>
+                </div>
+            </a>
             <a href="{% url 'iki' %}">
                 <div class="restaurant">
                     <img src="{% static 'foodApp/img/iki1.jpg' %}" alt="レストラン1">
