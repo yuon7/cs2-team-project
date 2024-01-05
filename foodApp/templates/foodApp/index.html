@@ -42,7 +42,7 @@
                     <img src="{% static 'foodApp/img/haya.png' %}" alt="レストラン1">
                     <div class="restaurant-info">
                         <h3>はやし田</h3>
-                        <div class="rating">{{ hayashida|default:"レビューなし" }}</div>
+                        <div class="rating">評価:{{ hayashida|default:"レビューなし" }}</div>
                         <p>一番街/ラーメン、つけ麺</p>
                     </div>
                 </div>
@@ -52,7 +52,7 @@
                     <img src="{% static 'foodApp/img/danbo.JPG' %}" alt="レストラン1">
                     <div class="restaurant-info">
                         <h3>暖母（ダンボ）</h3>
-                        <div class="rating">{{ danbo|default:"レビューなし" }}</div>
+                        <div class="rating">評価:{{ danbo|default:"レビューなし" }}</div>
                         <p>カフェ・喫茶/パスタ・洋食</p>
                     </div>
                 </div>
@@ -62,7 +62,7 @@
                     <img src="{% static 'foodApp/img/kyosuke.png' %}" alt="レストラン1">
                     <div class="restaurant-info">
                         <h3>赤羽京介</h3>
-                        <div class="rating">{{ kyosuke|default:"レビューなし" }}</div>
+                        <div class="rating">評価:{{ kyosuke|default:"レビューなし" }}</div>
                         <p>赤羽駅から徒歩５分/つけ麺、ラーメン</p>
                     </div>
                 </div>
@@ -72,17 +72,17 @@
                     <img src="{% static 'foodApp/img/helspo.jpg' %}" alt="レストラン1">
                     <div class="restaurant-info">
                         <h3>Helspo食堂</h3>
-                        <div class="rating">{{ helspo|default:"レビューなし" }}</div>
+                        <div class="rating">評価:{{ helspo|default:"レビューなし" }}</div>
                         <p>東洋大学赤羽台キャンパス/食堂</p>
                     </div>
                 </div>
             </a>
             <a href="{% url 'wellb' %}">
                 <div class="restaurant">
-                    <img src="{% static 'foodApp/img/wellb.png' %}" alt="レストラン1">
+                    <img src="{% static 'foodApp/img/wellb.jpg' %}" alt="レストラン1">
                     <div class="restaurant-info">
                         <h3>WellB食堂</h3>
-                        <div class="rating">{{ wellb|default:"レビューなし" }}</div>
+                        <div class="rating">評価:{{ wellb|default:"レビューなし" }}</div>
                         <p>東洋大学赤羽台キャンパス/食堂</p>
                     </div>
                 </div>
