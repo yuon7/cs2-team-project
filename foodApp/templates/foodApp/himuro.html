@@ -48,21 +48,16 @@
                     
                     <!-- 他のメニュー項目 -->
                 </ul>
-            </section>
-            <section id="reviews">
-                <!-- レビューセクション -->
-                <h2>レビュー</h2>
-                <!-- レビューを表示 -->
-                <article>
-                    <p>レビュー内容1</p>
-                    <!-- レビュー詳細 -->
-                </article>
-                <article>
-                    <p>レビュー内容2</p>
-                    <!-- レビュー詳細 -->
-                </article>
-                <!-- 他のレビュー -->
-            </section>
+                <section>
+                    <div class="form-review">
+                        <form method="post">
+                            <h2>レビューを書く</h2>
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                            <button type="submit">投稿する</button>
+                        </form>
+                    </div>
+                </section>
             <section id="location">
                 <!-- マップ情報 -->
                 <h2>場所</h2>
