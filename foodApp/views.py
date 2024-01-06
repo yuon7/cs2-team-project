@@ -197,7 +197,37 @@ def wellb(request):
 
 
 def tonnya(request):
-    return render(request, 'foodApp/tonnya.html')
+    tonya = Restaurant.objects.get(name="赤羽京介")
+    tonya_reviews = Review.objects.filter(restaurant=kyosuke)
+    average_rating = tonya_reviews.aggregate(
+        Avg('rating'))['rating__avg']
+
+    if average_rating is not None:
+        average_rating = round(average_rating, 1)
+        average_stars = get_star_rating(round(average_rating))
+    else:
+        average_rating = 'No reviews yet'
+
+    for review in tonya_reviews:
+        review.stars = get_star_rating(review.rating)
+
+    if request.method == "POST":
+        form = ReviewForm(request.POST)
+        if form.is_valid():
+            review = form.save(commit=False)
+            review.restaurant = tonya
+            review.save()
+            return redirect('tonnya')
+    else:
+        form = ReviewForm()
+
+    return render(request, 'foodApp/kyosuke.html', {
+        'restaurant': tonya,
+        'reviews': tonya_reviews,
+        'average_rating': average_rating,
+        'average_stars': average_stars if average_rating != 'No reviews yet' else 'まだレビューがありません',
+        'form': form
+    })
 
 
 def manngetu(request):
